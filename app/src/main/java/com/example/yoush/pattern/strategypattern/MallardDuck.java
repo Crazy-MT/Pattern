@@ -1,4 +1,4 @@
-package com.example.yoush.strategypattern.strategypattern;
+package com.example.yoush.pattern.strategypattern;
 
 import android.util.Log;
 

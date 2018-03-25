@@ -1,4 +1,4 @@
-package com.example.yoush.strategypattern;
+package com.example.yoush.pattern;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.yoush.strategypattern.strategypattern;
+package com.example.yoush.pattern.strategypattern;
 
 /**
  * Created by yoush on 2018/3/15.

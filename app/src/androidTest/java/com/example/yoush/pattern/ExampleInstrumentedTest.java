@@ -1,4 +1,4 @@
-package com.example.yoush.strategypattern;
+package com.example.yoush.pattern;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
