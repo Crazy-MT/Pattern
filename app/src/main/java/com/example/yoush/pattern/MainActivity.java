@@ -3,6 +3,10 @@ package com.example.yoush.pattern;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.yoush.pattern.adapter.ducks.DuckAdapter;
+import com.example.yoush.pattern.adapter.ducks.Turkey;
+import com.example.yoush.pattern.adapter.ducks.TurkeyAdapter;
+import com.example.yoush.pattern.adapter.ducks.WildTurkey;
 import com.example.yoush.pattern.observer.observerpattern.CurrentConditionsDisplay;
 import com.example.yoush.pattern.observer.observerpattern.ForecastDisplay;
 import com.example.yoush.pattern.observer.observerpattern.HeatIndexDisplay;
@@ -44,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         weatherData.setMeasurements(80, 65, 30.4f);
         weatherData.setMeasurements(82, 70, 29.2f);
-        weatherData.setMeasurements(78, 90, 29.2f);*/
+        weatherData.setMeasurements(78, 90, 29.2f);
 
         Singleton singleton = Singleton.getInstance();
         System.out.print(singleton.getDescription());
@@ -60,7 +64,33 @@ public class MainActivity extends AppCompatActivity {
         com.example.yoush.pattern.singleton.subclass.Singleton bar = HotterSingleton.getInstance();
         System.out.print(foo);
         System.out.print(bar);
+*/
 
+        com.example.yoush.pattern.adapter.ducks.MallardDuck duck = new com.example.yoush.pattern.adapter.ducks.MallardDuck();
+        WildTurkey turkey = new WildTurkey();
+        com.example.yoush.pattern.adapter.ducks.Duck turkeyAdapter = new TurkeyAdapter(turkey);
+        System.out.println("The Turkey says...");
+        turkey.gobble();
+        turkey.fly();
+
+        System.out.println("The Duck says");
+        testDuck(duck);
+
+        System.out.println("The TurkeyAdapter syas...");
+        testDuck(turkeyAdapter);
+
+        com.example.yoush.pattern.adapter.ducks.MallardDuck duck1 = new com.example.yoush.pattern.adapter.ducks.MallardDuck();
+        Turkey duckAdapter = new DuckAdapter(duck1);
+        for (int i = 0; i < 10; i++){
+            System.out.println("The DuckAdapter says...");
+            duckAdapter.gobble();
+            duckAdapter.fly();
+        }
+    }
+
+    static void testDuck(com.example.yoush.pattern.adapter.ducks.Duck duck){
+        duck.quack();
+        duck.fly();
     }
 }
 
